@@ -7,36 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="result.css">
     <title>Card Genrator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            border: 2px solid red;
-            
-        }
-
-        .card {
-            width: 400px;
-            height: 250px;
-            border: 1px solid black;
-            border-radius: 8px;
-            margin: 10px;
-            padding: 15px;
-            text-align: center;
-            font-size: xx-large;
-        
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -61,37 +34,6 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve data from sessionStorage
-    var userData = sessionStorage.getItem('userName');
-
-    // Display data in div elements
-    displayData(userData);
-});
-
-function displayData(data) {
-    var displayElements = document.querySelectorAll('.card');
-
-    // Display data in each div
-    displayElements.forEach(function(element) {
-        element.innerText = data;
-    });
-}    
-// document.getElementById("card1").style.fontStyle = "italic";
-// document.getElementById("card1").style.fontStyle = "𝕐𝕠𝕦𝕣 ℕ𝕒𝕞𝕖"  
-// document.getElementById("card1").style.fontStyle = "italic"
-// document.getElementById("card1").style.fontStyle = "italic"
-// document.getElementById("card1").style.fontStyle = "italic"
-// document.getElementById("card1").style.fontStyle = "italic"
-document.getElementById("card1").style.fontFamily = "Impact";
-document.getElementById("card2").style.fontFamily = "Audiowide";
-document.getElementById("card3").style.fontFamily = "Tangerine";
-document.getElementById("card4").style.fontFamily = "Verdana";
-document.getElementById("card5").style.fontFamily = "Trirong";
-document.getElementById("card6").style.fontFamily = "Sofia";
-
-
-    </script>
+    <script src="result.js"> </script>
 </body>
 </html>
