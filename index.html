@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card Genrator</title>
 </head>
 <body>
     <center>
         <h1>Card Genrator</h1>
         <br>
-        <form action="">
+        <form onsubmit="return myData()" action="result.html">
         <label for="stringInput">Enter name</label>
-        <input type="text" id="stringInput"  pattern="[A-Za-z]+" title="Enter alphabtes only" required>
+        <input type="text" id="name"  pattern="[A-Za-z]+" title="Enter alphabtes only" required>
         <input type="submit" value="Submit">
     </form>
     </center>
+    <script>
+        function myData() {
+            var name = document.getElementById("name").value;
+
+            if(name < 10){
+                alert("Enter name max 10 letters");
+                return false;
+            }
+            else{
+                sessionStorage.setItem("userName",name);
+                return true;
+            }
+        }
+    </script>
 </body>
 </html>

@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card Genrator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            border: 2px solid red;
+            
+        }
+
+        .card {
+            width: 400px;
+            height: 250px;
+            border: 1px solid black;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            font-size: xx-large;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="card" id="card1">
+            
+        </div>
+        <div class="card" id="card2">
+            
+        </div>
+        <div class="card" id="card3">
+            
+        </div>
+        <div class="card" id="card4">
+            
+        </div>
+        <div class="card" id="card5">
+            
+        </div>
+        <div class="card" id="card6">
+            
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve data from sessionStorage
+    var userData = sessionStorage.getItem('userName');
+
+    // Display data in div elements
+    displayData(userData);
+});
+
+function displayData(data) {
+    var displayElements = document.querySelectorAll('.card');
+
+    // Display data in each div
+    displayElements.forEach(function(element) {
+        element.innerText = data;
+    });
+}    
+document.getElementById("card1").style.fontStyle = "italic";
+document.getElementById("card1").style.fontStyle = "𝕐𝕠𝕦𝕣 ℕ𝕒𝕞𝕖"  
+document.getElementById("card1").style.fontStyle = "italic"
+document.getElementById("card1").style.fontStyle = "italic"
+document.getElementById("card1").style.fontStyle = "italic"
+document.getElementById("card1").style.fontStyle = "italic"
+
+    </script>
 </body>
 </html>
