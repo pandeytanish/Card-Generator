@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve data from sessionStorage
+
     var userData = sessionStorage.getItem('userName');
 
-    // Display data in div elements
     displayData(userData);
 });
 
 function displayData(data) {
     var displayElements = document.querySelectorAll('.card');
 
-    // Display data in each div
+
     displayElements.forEach(function(element) {
         element.innerText = data;
     });
